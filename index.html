@@ -1,82 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Vitae - Valeria Paiz</title>
+
+<!-- CSS para Flexbox -->
+<style>
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fdf0bf; flex-wrap: wrap; }
+header img { width: 200px; border-radius: 10px; }
+header .header-info h1 { margin:0; }
+header .header-info h2 { margin:5px 0 0 0; font-weight:normal; }
+
+nav ul { display:flex; list-style:none; justify-content:space-between; padding:0; margin:10px 0; }
+nav ul li { margin-right:15px; }
+nav ul li:last-child { margin-right:0; }
+nav a { text-decoration:none; color:#333; font-weight:bold; }
+
+main.cv-main { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
+section.experience { flex:2; }
+aside.skills { flex:1; background-color:#f9f9f9; padding:10px; border-radius:8px; }
+
+article .job-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
+article p { margin:0 0 10px 0; }
+
+@media(max-width:768px) {
+  main.cv-main { flex-direction:column; }
+  header { flex-direction:column; align-items:flex-start; }
+  nav ul { flex-direction:column; }
+}
+</style>
+
 </head>
 <body>
-    <header style="background-color: rgb(252, 204, 191);">
-        <div>
-            <img src="valeria.jpg" alt="Foto de perfil" width="200px" height="">
-        </div>
-        <div>
-            <h1>Valeria Paiz, 21 años</h1>
-            <h2>Diseñadora Gráfica</h2>   
-        </header>
-        <header style="background-color:rgb(251, 193, 134);">
-           
-        </div>
-        <div>
-            <h3>Contacto</h3>
-            <nav>
-                <ul>
-                    <li><strong>Correo electronico:</strong> <a href="https://mail.google.com/"> valeriapaizm1918@gmail.com</a></li>
-                    <li><strong>Telefono móvil:</strong> 623939886</li>
-                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/valeriapaiz"> linkedin.com/in/valeriapaiz</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/valeriapaizm1918"> github.com/valeriapaizm1918</a></li>
-                    <li><strong>Dirección:</strong> España, Valencia, Amado Granell Mesado 31</li>
-                    </header>
 
-<main> 
-    <section>
-        <h3>Experiencia Laboral</h3>
-        <article>
-        <ul>
-            <li><strong>Freelance (2022 - 2024) </strong> <br></li>
-                <em>Diseñadora gráfica desarrollando identidad visual y contenido para distintos clientes.</em>
-        </article>
-                  
-                </ul>
-    </section>
+<header>
+  <div class="header-info">
+    <h1>Valeria Paiz</h1>
+    <h2>Diseñadora Gráfica</h2>
+  </div>
+  <div class="header-photo">
+    <img src="valeria.jpg" alt="Foto de perfil">
+  </div>
+</header>
 
-    <section>
-        <h3>Educación</h3>
-        <article>
-        <ul>
-            <li><strong>Grado en Diseño Gráfico en Tecnologías Creativas, Universidad Europea de Valencia (2024 - 2028)</strong> </li>
-            </article>
-        </ul>
-    </section>
+<div>
+  <h3>Contacto</h3>
+  <nav>
+    <ul>
+      <li><strong>Correo:</strong> <a href="mailto:valeriapaizm1918@gmail.com">valeriapaizm1918@gmail.com</a></li>
+      <li><strong>Teléfono:</strong> 623939886</li>
+      <li><strong>LinkedIn:</strong> <a href="#">valeriapaiz</a></li>
+      <li><strong>GitHub:</strong> <a href="#">valeriapaizm1918</a></li>
+      <li><strong>Dirección:</strong> España, Valencia, Valencia, Amado Granell Mesado 31</li>
+    </ul>
+  </nav>
+</div>
 
-    <section>
-        <h3>Habilidades</h3>
-        <article>
-        <ul>
-            <li>Sociable</li>
-            <li>Amable</li>
-            <li>Sabe trabajar en equipo</li>
-            </article>
-        </ul>
-    </section>
+<main class="cv-main">
+  <section class="experience">
+    <h3>Experiencia Laboral</h3>
+    <article>
+      <div class="job-header">
+        <em>Diseñadora Gráfica</em>
+        <strong>2022-2024</strong>
+      </div>
+      <p>Freelance</p>
+    </article>
+  </section>
 
-    <section>
-        <h3>Idiomas</h3>
-        <article>
-        <ul>
-            <li>Español</li>
-            <li>Inglés</li>
-            </article>
+  <aside class="skills">
+    <h3>Habilidades</h3>
+    <ul>
+      <li>Sociable</li>
+      <li>Amable</li>
+      <li>Trabajo en equipo</li>
+    </ul>
+  </aside>
+</main>
 
-        </ul>
-    </section>
+<section>
+  <h3>Educación</h3>
+  <article>
+    <ul>
+      <li><strong>Grado en Diseño Gráfico en Tecnologías Creativas, Universidad Europea de Valencia (2024-2028)</strong></li>
+    </ul>
+  </article>
+</section>
 
-    <section>
-        <h3>Disponibilidad</h3>
-        <article>
-        <ul>
-            <li>Disponibilidad inmediata.</li>
-            <li>Jornada parcial / remoto.</li>
-            </article>
-        </ul>
-    </section>
+<section>
+  <h3>Idiomas</h3>
+  <article>
+    <ul>
+      <li>Español</li>
+      <li>Inglés</li>
+    </ul>
+  </article>
+</section>
+
+<section>
+  <h3>Disponibilidad</h3>
+  <article>
+    <ul>
+      <li>Parcial/Remoto</li>
+      <li>Disponibilidad inmediata</li>
+    </ul>
+  </article>
+</section>
+
+</body>
+</html>
