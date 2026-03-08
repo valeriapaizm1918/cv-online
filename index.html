@@ -110,3 +110,53 @@ article p { margin:0 0 10px 0; }
 
 </body>
 </html>
+<section id="contacto">
+<h2>Contacto</h2>
+
+<form>
+
+<h3>Datos del Reclutador</h3>
+
+<label for="nombre">Nombre completo *</label>
+<input type="text" id="nombre" name="nombre" required>
+
+<label for="email">Correo electrónico *</label>
+<input type="email" id="email" name="email" required>
+
+<label for="telefono">Teléfono de empresa *</label>
+<input type="tel" id="telefono" name="telefono" required>
+
+
+<h3>Preferencia de Entrevista</h3>
+
+<label for="tipo_entrevista">Tipo de entrevista</label>
+
+<select id="tipo_entrevista" name="tipo_entrevista" required>
+
+<option value="">Seleccione una opción</option>
+<option value="presencial">Entrevista Presencial</option>
+<option value="online">Entrevista Online (Videollamada)</option>
+<option value="telefono">Llamada telefónica inicial</option>
+
+</select>
+
+
+<h3>Programación y Detalles</h3>
+
+<label for="fecha">Fecha sugerida</label>
+<input type="date" id="fecha" name="fecha" required>
+
+<label for="urgencia">Nivel de urgencia (1-5)</label>
+<input type="range" id="urgencia" name="urgencia" min="1" max="5">
+
+
+<label for="mensaje">Mensaje adicional</label>
+
+<textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+<br><br>
+
+<button type="submit">Enviar</button>
+
+</form>
+</section>
