@@ -5,113 +5,257 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curriculum Vitae - Valeria Paiz</title>
 
-<!-- CSS para Flexbox -->
 <style>
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fdf0bf; flex-wrap: wrap; }
-header img { width: 200px; border-radius: 10px; }
-header .header-info h1 { margin:0; }
-header .header-info h2 { margin:5px 0 0 0; font-weight:normal; }
 
-nav ul { display:flex; list-style:none; justify-content:space-between; padding:0; margin:10px 0; }
-nav ul li { margin-right:15px; }
-nav ul li:last-child { margin-right:0; }
-nav a { text-decoration:none; color:#333; font-weight:bold; }
+/* HEADER */
 
-main.cv-main { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
-section.experience { flex:2; }
-aside.skills { flex:1; background-color:#f9f9f9; padding:10px; border-radius:8px; }
-
-article .job-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
-article p { margin:0 0 10px 0; }
-
-@media(max-width:768px) {
-  main.cv-main { flex-direction:column; }
-  header { flex-direction:column; align-items:flex-start; }
-  nav ul { flex-direction:column; }
+header {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background-color:#fdf0bf;
+flex-wrap:wrap;
 }
-</style>
 
+header img{
+width:200px;
+border-radius:10px;
+}
+
+header .header-info h1{
+margin:0;
+}
+
+header .header-info h2{
+margin:5px 0 0 0;
+font-weight:normal;
+}
+
+/* NAV */
+
+nav ul{
+display:flex;
+list-style:none;
+justify-content:space-between;
+padding:0;
+margin:10px 0;
+flex-wrap:wrap;
+}
+
+nav ul li{
+margin-right:15px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+/* MAIN */
+
+main.cv-main{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
+}
+
+section.experience{
+flex:2;
+}
+
+aside.skills{
+flex:1;
+background-color:#f9f9f9;
+padding:10px;
+border-radius:8px;
+}
+
+article .job-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:5px;
+}
+
+article p{
+margin:0 0 10px 0;
+}
+
+/* FORMULARIO CONTACTO */
+
+#contacto{
+padding:20px;
+}
+
+#contacto form{
+max-width:500px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea{
+width:100%;
+padding:8px;
+margin:6px 0;
+border:2px solid gray;
+border-radius:5px;
+}
+
+/* validación visual */
+
+#contacto input:valid,
+#contacto select:valid,
+#contacto textarea:valid{
+border-color:green;
+}
+
+#contacto input:invalid,
+#contacto select:invalid{
+border-color:red;
+}
+
+button{
+padding:10px;
+background:#0077cc;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+main.cv-main{
+flex-direction:column;
+}
+
+header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="header-info">
-    <h1>Valeria Paiz</h1>
-    <h2>Diseñadora Gráfica</h2>
-  </div>
-  <div class="header-photo">
-    <img src="valeria.jpg" alt="Foto de perfil">
-  </div>
+
+<div class="header-info">
+<h1>Valeria Paiz</h1>
+<h2>Diseñadora Gráfica</h2>
+</div>
+
+<div class="header-photo">
+<img src="valeria.jpg" alt="Foto de perfil">
+</div>
+
 </header>
 
 <div>
-  <h3>Contacto</h3>
-  <nav>
-    <ul>
-      <li><strong>Correo:</strong> <a href="mailto:valeriapaizm1918@gmail.com">valeriapaizm1918@gmail.com</a></li>
-      <li><strong>Teléfono:</strong> 623939886</li>
-      <li><strong>LinkedIn:</strong> <a href="#">valeriapaiz</a></li>
-      <li><strong>GitHub:</strong> <a href="#">valeriapaizm1918</a></li>
-      <li><strong>Dirección:</strong> España, Valencia, Valencia, Amado Granell Mesado 31</li>
-    </ul>
-  </nav>
+
+<h3>Contacto</h3>
+
+<nav>
+<ul>
+
+<li><strong>Correo:</strong> <a href="mailto:valeriapaizm1918@gmail.com">valeriapaizm1918@gmail.com</a></li>
+
+<li><strong>Teléfono:</strong> 623939886</li>
+
+<li><strong>LinkedIn:</strong> <a href="#">valeriapaiz</a></li>
+
+<li><strong>GitHub:</strong> <a href="#">valeriapaizm1918</a></li>
+
+<li><strong>Dirección:</strong> España, Valencia, Valencia, Amado Granell Mesado 31</li>
+
+</ul>
+</nav>
+
 </div>
 
 <main class="cv-main">
-  <section class="experience">
-    <h3>Experiencia Laboral</h3>
-    <article>
-      <div class="job-header">
-        <em>Diseñadora Gráfica</em>
-        <strong>2022-2024</strong>
-      </div>
-      <p>Freelance</p>
-    </article>
-  </section>
 
-  <aside class="skills">
-    <h3>Habilidades</h3>
-    <ul>
-      <li>Sociable</li>
-      <li>Amable</li>
-      <li>Trabajo en equipo</li>
-    </ul>
-  </aside>
+<section class="experience">
+
+<h3>Experiencia Laboral</h3>
+
+<article>
+
+<div class="job-header">
+<em>Diseñadora Gráfica</em>
+<strong>2022-2024</strong>
+</div>
+
+<p>Freelance</p>
+
+</article>
+
+</section>
+
+<aside class="skills">
+
+<h3>Habilidades</h3>
+
+<ul>
+<li>Sociable</li>
+<li>Amable</li>
+<li>Trabajo en equipo</li>
+</ul>
+
+</aside>
+
 </main>
 
 <section>
-  <h3>Educación</h3>
-  <article>
-    <ul>
-      <li><strong>Grado en Diseño Gráfico en Tecnologías Creativas, Universidad Europea de Valencia (2024-2028)</strong></li>
-    </ul>
-  </article>
+
+<h3>Educación</h3>
+
+<ul>
+<li><strong>Grado en Diseño Gráfico en Tecnologías Creativas, Universidad Europea de Valencia (2024-2028)</strong></li>
+</ul>
+
 </section>
 
 <section>
-  <h3>Idiomas</h3>
-  <article>
-    <ul>
-      <li>Español</li>
-      <li>Inglés</li>
-    </ul>
-  </article>
+
+<h3>Idiomas</h3>
+
+<ul>
+<li>Español</li>
+<li>Inglés</li>
+</ul>
+
 </section>
 
 <section>
-  <h3>Disponibilidad</h3>
-  <article>
-    <ul>
-      <li>Parcial/Remoto</li>
-      <li>Disponibilidad inmediata</li>
-    </ul>
-  </article>
+
+<h3>Disponibilidad</h3>
+
+<ul>
+<li>Parcial / Remoto</li>
+<li>Disponibilidad inmediata</li>
+</ul>
+
 </section>
 
-</body>
-</html>
+
+<!-- NUEVA SECCIÓN DE CONTACTO (TAREA) -->
+
 <section id="contacto">
-<h2>Contacto</h2>
+
+<h2>Formulario de Contacto</h2>
 
 <form>
 
@@ -149,7 +293,6 @@ article p { margin:0 0 10px 0; }
 <label for="urgencia">Nivel de urgencia (1-5)</label>
 <input type="range" id="urgencia" name="urgencia" min="1" max="5">
 
-
 <label for="mensaje">Mensaje adicional</label>
 
 <textarea id="mensaje" name="mensaje" rows="4"></textarea>
@@ -159,4 +302,8 @@ article p { margin:0 0 10px 0; }
 <button type="submit">Enviar</button>
 
 </form>
+
 </section>
+
+</body>
+</html>
